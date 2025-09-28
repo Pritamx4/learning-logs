@@ -42,5 +42,5 @@ It also serves as a **timeline of my coding journey**, where I can look back and
 
 ### ✅ Commit Message Example
 ```
-Day 3 of solving problems on leetcode 
+Day 5 of solving problems on leetcode 
 ```
