@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics - Styling Seekho</title>
+    
+    <!-- ============================================ -->
+    <!-- CSS KAHA LIKHTE HAI? 3 TARIKE HAI -->
+    <!-- ============================================ -->
+    
+    <!-- 1. INTERNAL CSS - <style> tag me (pehle waha tha) -->
+    <!-- 2. INLINE CSS - element me directly -->
+    <!-- 3. EXTERNAL CSS - alag file me (ab hum ye use kar rahe - BEST PRACTICE!) -->
+    
+    <!-- External CSS file - Professional way! -->
+    <link rel="stylesheet" href="css/02-css.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Main Heading -->
+        <h1 id="main-heading">ðŸŽ¨ CSS Basics - Complete Guide</h1>
+
+        <!-- ============================================ -->
+        <div class="text-section">
+            <h2>ðŸ“ Text Styling</h2>
+            <div class="text-examples">
+                <p class="font-large">Large Font (24px)</p>
+                <p class="font-small">Small Font (12px)</p>
+                <p class="font-weight-bold">Bold Text (font-weight: bold)</p>
+                <p class="font-weight-light">Light Text (font-weight: 300)</p>
+                <p class="font-italic">Italic Text (font-style: italic)</p>
+                <p class="text-uppercase">uppercase text</p>
+                <p class="text-lowercase">LOWERCASE TEXT</p>
+                <p class="text-capitalize">capitalize each word</p>
+                <p class="text-underline">Underlined Text</p>
+                <p class="text-line-through">Line Through Text</p>
+                <p class="letter-spacing">L e t t e r   S p a c i n g</p>
+                <p class="line-height-example">
+                    Line height example.<br>
+                    Lines ke beech me zyada gap hai.<br>
+                    Readability improve hoti hai.
+                </p>
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- COLORS -->
+        <!-- ============================================ -->
+        <div class="color-section">
+            <h2>ðŸŽ¨ Colors</h2>
+            <p class="color-named">Named Color: red</p>
+            <p class="color-hex">Hex Color: #3498db</p>
+            <p class="color-rgb">RGB Color: rgb(52, 152, 219)</p>
+            <p class="color-rgba">RGBA with transparency (background)</p>
+            <p class="bg-color">Background Color: #f1c40f</p>
+            
+            <div class="code-block">
+/* Color lagane ke tarike: */
+color: red;                    /* Named */
+color: #3498db;                /* Hex */
+color: rgb(52, 152, 219);      /* RGB */
+color: rgba(52, 152, 219, 0.5);/* RGBA (transparent) */
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- BOX MODEL -->
+        <!-- ============================================ -->
+        <div class="box-model-section">
+            <h2>ðŸ“¦ Box Model</h2>
+            <p><strong>Box Model = Content + Padding + Border + Margin</strong></p>
+            
+            <div class="box-example">
+                <strong>Box Example</strong><br>
+                Content ke andar = Padding<br>
+                Green border = Border<br>
+                Bahar ka space = Margin
+            </div>
+            
+            <div class="border-specific">
+                Different borders on each side
+            </div>
+            
+            <div class="padding-all">Padding all sides (20px)</div>
+            <div class="padding-specific">Specific padding (Top: 10px, Right: 20px, Bottom: 30px, Left: 40px)</div>
+            <div class="margin-example">Margin: 30px (bahar ka space)</div>
+            
+            <div class="code-block">
+/* Box Model properties: */
+padding: 20px;              /* Content ke andar ka space */
+border: 2px solid black;    /* Border */
+margin: 20px;               /* Bahar ka space */
+
+/* Shorthand (clockwise: top, right, bottom, left) */
+padding: 10px 20px 30px 40px;
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- DISPLAY PROPERTY -->
+        <!-- ============================================ -->
+        <div class="display-section">
+            <h2>ðŸ‘ï¸ Display Property</h2>
+            
+            <div class="display-block">Block 1 (puri width)</div>
+            <div class="display-block">Block 2 (niche naya line)</div>
+            
+            <p>
+                <span class="display-inline">Inline 1</span>
+                <span class="display-inline">Inline 2</span>
+                <span class="display-inline">Inline 3</span>
+                (same line me)
+            </p>
+            
+            <div>
+                <div class="display-inline-block">Box 1</div>
+                <div class="display-inline-block">Box 2</div>
+                <div class="display-inline-block">Box 3</div>
+            </div>
+            
+            <div class="code-block">
+/* Display types: */
+display: block;        /* Puri width, niche naya line */
+display: inline;       /* Content width, same line */
+display: inline-block; /* Inline but width/height set kar sakte */
+display: none;         /* Hide (DOM me rehta) */
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- POSITION -->
+        <!-- ============================================ -->
+        <div class="position-section">
+            <h2>ðŸ“ Position Property</h2>
+            
+            <div class="position-static">Position: Static (default)</div>
+            <div class="position-relative">Position: Relative (top: 20px, left: 30px)</div>
+            <div class="position-absolute">Position: Absolute (top: 50px, right: 20px)</div>
+            
+            <div style="margin-top: 100px;">
+                <p><strong>Fixed button neeche right corner me hai (scroll karo)</strong></p>
+            </div>
+            
+            <div class="code-block">
+/* Position types: */
+position: static;   /* Default */
+position: relative; /* Normal position se move */
+position: absolute; /* Parent ke relative */
+position: fixed;    /* Screen ke relative */
+position: sticky;   /* Scroll pe fixed ho jata */
+            </div>
+        </div>
+        
+        <!-- Fixed button -->
+        <div class="position-fixed">ðŸ‘† Fixed</div>
+        
+        <!-- ============================================ -->
+        <!-- FLEXBOX -->
+        <!-- ============================================ -->
+        <div class="flex-section">
+            <h2>ðŸŽ¯ Flexbox Layout</h2>
+            
+            <p><strong>Basic Flex:</strong></p>
+            <div class="flex-container">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+            
+            <p><strong>Justify Center:</strong></p>
+            <div class="flex-container flex-justify-center">
+                <div class="flex-item">Center</div>
+            </div>
+            
+            <p><strong>Space Between:</strong></p>
+            <div class="flex-container flex-justify-between">
+                <div class="flex-item">Left</div>
+                <div class="flex-item">Right</div>
+            </div>
+            
+            <p><strong>Align Center (Vertical):</strong></p>
+            <div class="flex-container flex-align-center">
+                <div class="flex-item">Vertically Centered</div>
+            </div>
+            
+            <div class="code-block">
+/* Flexbox example: */
+.container {
+    display: flex;              /* Enable flexbox */
+    justify-content: center;    /* Horizontal alignment */
+    align-items: center;        /* Vertical alignment */
+    gap: 10px;                  /* Items ke beech gap */
+}
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- BACKGROUNDS -->
+        <!-- ============================================ -->
+        <div class="background-section">
+            <h2>ðŸŒˆ Backgrounds</h2>
+            
+            <div class="bg-simple">Simple Background Color</div>
+            <div class="bg-gradient">Gradient Background (Multiple colors)</div>
+            <div class="bg-image-example">Background Image</div>
+            
+            <div class="code-block">
+/* Background properties: */
+background-color: #e91e63;          /* Solid color */
+background-image: url('image.jpg'); /* Image */
+background-size: cover;             /* Cover kare */
+background-position: center;        /* Center me */
+background-repeat: no-repeat;       /* Repeat na kare */
+
+/* Gradient: */
+background: linear-gradient(45deg, red, blue);
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- BORDERS & SHADOWS -->
+        <!-- ============================================ -->
+        <div class="borders-section">
+            <h2>ðŸŽ­ Borders & Shadows</h2>
+            
+            <div class="rounded-small">Small Border Radius (5px)</div>
+            <div class="rounded-large">Large Border Radius (20px)</div>
+            <div class="rounded-circle">Circle</div>
+            
+            <div class="shadow-small">Small Shadow</div>
+            <div class="shadow-large">Large Shadow</div>
+            
+            <div class="code-block">
+/* Border & Shadow: */
+border: 2px solid black;
+border-radius: 10px;         /* Rounded corners */
+border-radius: 50%;          /* Circle (width = height) */
+
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Chaaya */
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- HOVER EFFECTS -->
+        <!-- ============================================ -->
+        <div class="hover-section">
+            <h2>âœ¨ Hover Effects</h2>
+            
+            <button class="hover-button">Hover Me!</button>
+            <button class="hover-button">Another Button</button>
+            
+            <div class="hover-card">
+                <h3>Hover Card</h3>
+                <p>Mouse laane pe ye upar uthega aur shadow badhega!</p>
+            </div>
+            
+            <div class="code-block">
+/* Hover effect: */
+.button {
+    transition: all 0.3s ease; /* Smooth change */
+}
+
+.button:hover {
+    background: darkblue;
+    transform: scale(1.1);  /* Size bada */
+}
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- RESPONSIVE DESIGN -->
+        <!-- ============================================ -->
+        <div class="responsive-section">
+            <h2>ðŸ“± Responsive Design</h2>
+            
+            <div class="responsive-text">
+                Screen size change karo (browser resize karo) - text size change hoga!
+            </div>
+            
+            <div class="code-block">
+/* Media Query - Different screen sizes: */
+@media screen and (max-width: 768px) {
+    /* Tablet aur choti screen */
+    .container {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Mobile screen */
+    .heading {
+        font-size: 1.5em;
+    }
+}
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- PSEUDO CLASSES -->
+        <!-- ============================================ -->
+        <div class="pseudo-section">
+            <h2>ðŸŽ¯ Pseudo Classes</h2>
+            
+            <a href="#" class="pseudo-link">Hover Me (Link)</a>
+            
+            <ul class="list-with-pseudo">
+                <li>First item (Red)</li>
+                <li>Second item (Green)</li>
+                <li>Third item</li>
+                <li>Last item (Blue)</li>
+            </ul>
+            
+            <div class="code-block">
+/* Pseudo classes: */
+a:hover    { color: red; }      /* Mouse hover */
+a:active   { color: blue; }     /* Click karte waqt */
+li:first-child  { color: red; } /* Pehla item */
+li:last-child   { color: blue; }/* Last item */
+li:nth-child(2) { color: green; }/* 2nd item */
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- ADVANCED -->
+        <!-- ============================================ -->
+        <div class="advanced-section">
+            <h2>ðŸš€ Advanced CSS</h2>
+            
+            <div class="opacity-example">Opacity: 0.7 (70% visible)</div>
+            
+            <div class="overflow-example">
+                Overflow example - Bahut zyada content hai. Scrollbar aa jayega.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quisquam voluptatum, quibusdam, quia quas dolorum quod 
+                voluptatibus quae, voluptate quidem doloremque quos. 
+                Quisquam, voluptates. Lorem ipsum dolor sit amet.
+            </div>
+            
+            <p><strong>Cursor Types (hover karo):</strong></p>
+            <div class="cursor-types cursor-pointer">cursor: pointer</div>
+            <div class="cursor-types cursor-grab">cursor: grab</div>
+            <div class="cursor-types cursor-text">cursor: text</div>
+            <div class="cursor-types cursor-help">cursor: help</div>
+            
+            <div class="code-block">
+/* Advanced properties: */
+opacity: 0.7;          /* Transparency (0-1) */
+overflow: auto;        /* Content zyada ho to scroll */
+cursor: pointer;       /* Mouse cursor type */
+z-index: 999;          /* Layer order (high = top) */
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- ANIMATIONS -->
+        <!-- ============================================ -->
+        <div class="animation-section">
+            <h2>ðŸŽ¬ Animations</h2>
+            
+            <div class="animated-box">Bouncing!</div>
+            <div class="rotating-box">Rotating!</div>
+            
+            <div class="code-block">
+/* Animation: */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-20px); }
+}
+
+.box {
+    animation: bounce 2s infinite;
+}
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- SUMMARY -->
+        <!-- ============================================ -->
+        <div class="summary-box">
+            <h2>âœ… CSS Summary - Quick Reference</h2>
+            
+            <h3>CSS Kaha Likhe:</h3>
+            <ul>
+                <li><strong>Inline:</strong> <code>&lt;div style="color: red;"&gt;</code></li>
+                <li><strong>Internal:</strong> <code>&lt;style&gt;</code> tag me (head me)</li>
+                <li><strong>External:</strong> Alag .css file (best practice)</li>
+            </ul>
+            
+            <h3>Selectors:</h3>
+            <ul>
+                <li><code>element { }</code> - Type selector</li>
+                <li><code>.class { }</code> - Class selector</li>
+                <li><code>#id { }</code> - ID selector</li>
+                <li><code>element:hover { }</code> - Pseudo class</li>
+            </ul>
+            
+            <h3>Must Know Properties:</h3>
+            <ul>
+                <li><strong>Text:</strong> color, font-size, font-weight, text-align</li>
+                <li><strong>Box Model:</strong> padding, margin, border, width, height</li>
+                <li><strong>Display:</strong> display, position, z-index</li>
+                <li><strong>Flexbox:</strong> display: flex, justify-content, align-items</li>
+                <li><strong>Background:</strong> background-color, background-image, gradient</li>
+                <li><strong>Effects:</strong> box-shadow, border-radius, opacity, transform</li>
+                <li><strong>Animation:</strong> transition, animation, @keyframes</li>
+            </ul>
+            
+            <h3>Next Steps:</h3>
+            <p style="margin-top: 20px;">
+                <a href="03-javascript-basics.html" 
+                   style="background: white; color: #667eea; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block;">
+                    Next: JavaScript Basics â†’
+                </a>
+            </p>
+        </div>
+        
+        <!-- Footer -->
+        <div style="text-align: center; padding: 30px; color: #666; border-top: 2px solid #ddd; margin-top: 30px;">
+            <h2>ðŸŽ¨ CSS Basics Complete!</h2>
+            <p>Practice karte raho aur creativity explore karo! ðŸš€</p>
+            <p><small>Tip: Browser DevTools (F12) se live CSS edit kar sakte ho!</small></p>
+        </div>
+        
+    </div>
+
+</body>
+</html>
+
+<!--
+============================================
+CSS FILE KAISE BANATE HAI (External):
+============================================
+
+1. Alag file banao: style.css
+
+2. HTML me link karo (head me):
+   <link rel="stylesheet" href="style.css">
+
+3. CSS file me styles likho:
+   .button {
+       background: blue;
+       color: white;
+   }
+
+============================================
+CSS KE 3 TARIKE:
+============================================
+
+1. INLINE CSS (directly element pe):
+   <div style="color: red;">Hello</div>
+   
+2. INTERNAL CSS (style tag me):
+   <style>
+       div { color: red; }
+   </style>
+   
+3. EXTERNAL CSS (alag file):
+   <link rel="stylesheet" href="style.css">
+   (Best practice - reusable, organized)
+
+============================================
+IMPORTANT CONCEPTS:
+============================================
+
+âœ… Selectors - Element ko target karna
+âœ… Box Model - Padding, Border, Margin
+âœ… Display - Block, Inline, Flex
+âœ… Position - Static, Relative, Absolute, Fixed
+âœ… Flexbox - Modern layout system
+âœ… Colors - Hex, RGB, RGBA, Named
+âœ… Typography - Fonts, sizes, weights
+âœ… Backgrounds - Colors, gradients, images
+âœ… Borders & Shadows - Styling depth
+âœ… Hover Effects - Interactive elements
+âœ… Animations - Movement aur transitions
+âœ… Responsive Design - Different screen sizes
+âœ… Pseudo Classes - Special states (:hover, :active)
+
+============================================
+PRACTICE KARKE SEEKHO:
+============================================
+
+1. Different colors try karo
+2. Box model samjho (padding, margin change karo)
+3. Flexbox se layouts banao
+4. Hover effects add karo
+5. Animations try karo
+6. Responsive design test karo (browser resize)
+7. DevTools (F12) me live edit karo
+
+============================================
+CSS TIPS:
+============================================
+
+ðŸ’¡ Class names meaningful rakho: .button, .card
+ðŸ’¡ Comments likho code explain karne ke liye
+ðŸ’¡ Colors consistent rakho (color scheme)
+ðŸ’¡ Spacing consistent (padding, margins)
+ðŸ’¡ Reusable classes banao
+ðŸ’¡ Mobile-first approach (choti screen pehle)
+ðŸ’¡ Browser DevTools se inspect karo
+ðŸ’¡ Practice hi perfect banata hai!
+
+============================================
+-->

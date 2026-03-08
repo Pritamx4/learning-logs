@@ -1,0 +1,40 @@
+/* ============================================ */
+/* CSS for 01-html-basics.html */
+/* HTML Basics Tutorial Styling */
+/* ============================================ */
+
+/* Thodi styling taaki achha dikhe */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 { 
+    color: #333; 
+}
+
+code {
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+.example {
+    background: #e7f3ff;
+    padding: 15px;
+    border-left: 4px solid #007bff;
+    margin: 10px 0;
+}

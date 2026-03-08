@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics - JS Seekho</title>
+    
+    <!-- External CSS file - Professional way! -->
+    <link rel="stylesheet" href="css/03-javascript.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Main Heading -->
+        <h1>⚡ JavaScript Basics - Complete Guide</h1>
+        
+        <!-- ============================================ -->
+        <!-- 1. INTRODUCTION -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>📚 JavaScript Kya Hai?</h2>
+            <div class="example-box">
+                <p><strong>JavaScript = Programming Language</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Web pages ko interactive banata hai</li>
+                    <li>HTML = Structure, CSS = Styling, <span class="highlight">JS = Functionality</span></li>
+                    <li>Browser me run hota hai (client-side)</li>
+                    <li>Backend bhi bana sakte (Node.js)</li>
+                </ul>
+                
+                <div class="code-block">
+// JavaScript console me output
+console.log("Hello World!");  // Browser console me dikhega
+
+// Alert box (popup)
+// alert("Welcome to JavaScript!");
+
+// Variables - Data store karne ke liye
+let name = "Sai";           // Modern way (changeable)
+const age = 25;             // Constant (change nahi ho sakta)
+var city = "Mumbai";        // Old way (avoid karo)
+                </div>
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 2. VARIABLES & DATA TYPES -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>📊 Variables & Data Types</h2>
+            
+            <div class="code-block">
+// ============================================
+// VARIABLES - Data store karne ke containers
+// ============================================
+
+// let - value change ho sakti hai
+let username = "Sai";
+username = "Rahul";  // ✅ Change ho gaya
+
+// const - value change nahi ho sakti (constant)
+const pi = 3.14159;
+// pi = 3.14;  // ❌ Error - const change nahi hota
+
+// var - purana tarika (ab let/const use karo)
+var oldWay = "avoid karo";
+
+// ============================================
+// DATA TYPES - Alag alag tarah ka data
+// ============================================
+
+// 1. String - Text (quotes me)
+let fullName = "Sai Kumar";
+let message = 'Hello World';
+let template = `My name is ${fullName}`; // Template literal
+
+// 2. Number - Numbers (integer ya decimal)
+let age = 25;
+let price = 99.99;
+let negative = -50;
+
+// 3. Boolean - True/False
+let isLoggedIn = true;
+let hasPermission = false;
+
+// 4. Array - Multiple values ki list
+let colors = ["red", "green", "blue"];
+let numbers = [1, 2, 3, 4, 5];
+let mixed = [1, "hello", true, null];
+
+// 5. Object - Key-value pairs
+let person = {
+    name: "Sai",
+    age: 25,
+    city: "Mumbai",
+    isStudent: false
+};
+
+// 6. Null - Intentionally empty
+let emptyValue = null;
+
+// 7. Undefined - Not assigned yet
+let notDefined;
+
+// ============================================
+// Type check karna
+console.log(typeof "hello");    // "string"
+console.log(typeof 25);          // "number"
+console.log(typeof true);        // "boolean"
+console.log(typeof [1,2,3]);     // "object"
+            </div>
+            
+            <button onclick="showDataTypes()">Show Data Types in Console</button>
+            <div class="output-box" id="dataTypeOutput"></div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 3. OPERATORS -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>➕ Operators</h2>
+            
+            <div class="code-block">
+// ============================================
+// ARITHMETIC OPERATORS - Math operations
+// ============================================
+let a = 10;
+let b = 3;
+
+console.log(a + b);  // 13 (Addition - jodna)
+console.log(a - b);  // 7  (Subtraction - ghatana)
+console.log(a * b);  // 30 (Multiplication - guna)
+console.log(a / b);  // 3.333... (Division - bhag)
+console.log(a % b);  // 1  (Modulus - remainder/baki)
+console.log(a ** b); // 1000 (Exponent - power)
+
+// Increment/Decrement
+let count = 5;
+count++;   // 6 (count = count + 1)
+count--;   // 5 (count = count - 1)
+
+// ============================================
+// COMPARISON OPERATORS - Compare karna
+// ============================================
+console.log(10 == "10");   // true  (value same, type different)
+console.log(10 === "10");  // false (strict - value aur type dono)
+console.log(10 != "10");   // false
+console.log(10 !== "10");  // true  (strict not equal)
+
+console.log(10 > 5);   // true  (greater than - bada)
+console.log(10 < 5);   // false (less than - chota)
+console.log(10 >= 10); // true  (greater or equal)
+console.log(10 <= 5);  // false (less or equal)
+
+// ============================================
+// LOGICAL OPERATORS - Logic lagana
+// ============================================
+let age = 25;
+let hasLicense = true;
+
+// && (AND - dono true hone chahiye)
+console.log(age >= 18 && hasLicense);  // true
+
+// || (OR - ek bhi true ho)
+console.log(age < 18 || hasLicense);   // true
+
+// ! (NOT - opposite)
+console.log(!hasLicense);              // false
+
+// ============================================
+// STRING OPERATORS - String operations
+// ============================================
+let firstName = "Sai";
+let lastName = "Kumar";
+let fullName = firstName + " " + lastName;  // "Sai Kumar"
+
+// Template literals (modern way)
+let greeting = `Hello, ${firstName}! You are ${age} years old.`;
+            </div>
+            
+            <button onclick="demonstrateOperators()">Run Operators Demo</button>
+            <div class="output-box" id="operatorOutput"></div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 4. CONDITIONALS - IF/ELSE -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>🔀 Conditionals (If/Else)</h2>
+            
+            <div class="code-block">
+// ============================================
+// IF ELSE - Conditions check karna
+// ============================================
+
+let age = 20;
+
+// Simple if
+if (age >= 18) {
+    console.log("Adult hai");
+}
+
+// If-else
+if (age >= 18) {
+    console.log("Vote kar sakte ho");
+} else {
+    console.log("Abhi chote ho");
+}
+
+// If-else if-else (multiple conditions)
+let marks = 85;
+
+if (marks >= 90) {
+    console.log("Grade A+");
+} else if (marks >= 80) {
+    console.log("Grade A");
+} else if (marks >= 70) {
+    console.log("Grade B");
+} else if (marks >= 60) {
+    console.log("Grade C");
+} else {
+    console.log("Fail");
+}
+
+// Nested if (if ke andar if)
+let isLoggedIn = true;
+let isPremium = true;
+
+if (isLoggedIn) {
+    if (isPremium) {
+        console.log("Premium content access");
+    } else {
+        console.log("Free content access");
+    }
+}
+
+// ============================================
+// TERNARY OPERATOR - Short if-else
+// ============================================
+let canVote = (age >= 18) ? "Yes" : "No";
+console.log(canVote);  // "Yes"
+
+// ============================================
+// SWITCH CASE - Multiple conditions
+// ============================================
+let day = 3;
+let dayName;
+
+switch(day) {
+    case 1:
+        dayName = "Monday";
+        break;
+    case 2:
+        dayName = "Tuesday";
+        break;
+    case 3:
+        dayName = "Wednesday";
+        break;
+    default:
+        dayName = "Invalid day";
+}
+            </div>
+            
+            <div class="example-box">
+                <label>Enter Age:</label>
+                <input type="number" id="ageInput" value="25">
+                <button onclick="checkAge()">Check Eligibility</button>
+                <div class="output-box" id="ageOutput"></div>
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 5. LOOPS -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>🔁 Loops (Repeat karna)</h2>
+            
+            <div class="code-block">
+// ============================================
+// FOR LOOP - Fixed number of times
+// ============================================
+
+// 1 se 5 tak print
+for (let i = 1; i <= 5; i++) {
+    console.log("Number: " + i);
+}
+
+// Array loop
+let fruits = ["Apple", "Banana", "Mango"];
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
+// ============================================
+// WHILE LOOP - Condition true tak chalta
+// ============================================
+
+let count = 1;
+while (count <= 5) {
+    console.log("Count: " + count);
+    count++;
+}
+
+// ============================================
+// DO WHILE - Pehle execute, phir check
+// ============================================
+
+let num = 1;
+do {
+    console.log("Number: " + num);
+    num++;
+} while (num <= 5);
+
+// ============================================
+// FOR...OF - Arrays ke liye modern way
+// ============================================
+
+let colors = ["Red", "Green", "Blue"];
+for (let color of colors) {
+    console.log(color);
+}
+
+// ============================================
+// FOR...IN - Objects ke liye
+// ============================================
+
+let person = {
+    name: "Sai",
+    age: 25,
+    city: "Mumbai"
+};
+
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+
+// ============================================
+// ARRAY METHODS (Modern way)
+// ============================================
+
+// forEach - Har item pe function run karo
+let numbers = [1, 2, 3, 4, 5];
+numbers.forEach(function(num) {
+    console.log(num * 2);
+});
+
+// Arrow function (modern syntax)
+numbers.forEach(num => console.log(num * 2));
+            </div>
+            
+            <button onclick="demonstrateLoops()">Run Loops Demo</button>
+            <div class="output-box" id="loopOutput"></div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 6. FUNCTIONS -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>🔧 Functions</h2>
+            
+            <div class="code-block">
+// ============================================
+// FUNCTION DECLARATION - Traditional way
+// ============================================
+
+// Simple function (no parameters)
+function sayHello() {
+    console.log("Hello!");
+}
+sayHello();  // Call karna
+
+// Function with parameters
+function greet(name) {
+    console.log("Hello, " + name);
+}
+greet("Sai");  // Hello, Sai
+
+// Function with return value
+function add(a, b) {
+    return a + b;  // Value return karna
+}
+let sum = add(5, 3);  // 8
+
+// Default parameters
+function multiply(a, b = 2) {
+    return a * b;
+}
+console.log(multiply(5));     // 10 (5 * 2)
+console.log(multiply(5, 3));  // 15 (5 * 3)
+
+// ============================================
+// FUNCTION EXPRESSION - Variable me function
+// ============================================
+
+const subtract = function(a, b) {
+    return a - b;
+};
+console.log(subtract(10, 5));  // 5
+
+// ============================================
+// ARROW FUNCTIONS - Modern short syntax
+// ============================================
+
+// Traditional
+const addOld = function(a, b) {
+    return a + b;
+};
+
+// Arrow (short)
+const addNew = (a, b) => {
+    return a + b;
+};
+
+// Arrow (even shorter - implicit return)
+const addShorter = (a, b) => a + b;
+
+// Single parameter (parentheses optional)
+const square = num => num * num;
+
+// ============================================
+// CALLBACK FUNCTIONS - Function as parameter
+// ============================================
+
+function processNumbers(a, b, callback) {
+    return callback(a, b);
+}
+
+let result1 = processNumbers(5, 3, (x, y) => x + y);  // 8
+let result2 = processNumbers(5, 3, (x, y) => x * y);  // 15
+
+// ============================================
+// IMMEDIATELY INVOKED FUNCTION (IIFE)
+// ============================================
+
+(function() {
+    console.log("I run immediately!");
+})();
+            </div>
+            
+            <div class="example-box">
+                <input type="number" id="num1" placeholder="Number 1" value="5">
+                <input type="number" id="num2" placeholder="Number 2" value="3">
+                <button onclick="calculateSum()">Add</button>
+                <button onclick="calculateProduct()">Multiply</button>
+                <div class="output-box" id="functionOutput"></div>
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 7. ARRAYS -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>📚 Arrays</h2>
+            
+            <div class="code-block">
+// ============================================
+// ARRAY BASICS
+// ============================================
+
+// Create array
+let fruits = ["Apple", "Banana", "Mango"];
+let numbers = [1, 2, 3, 4, 5];
+
+// Access elements (0 se start)
+console.log(fruits[0]);  // "Apple"
+console.log(fruits[1]);  // "Banana"
+
+// Length
+console.log(fruits.length);  // 3
+
+// Change element
+fruits[1] = "Orange";
+
+// ============================================
+// ARRAY METHODS - Common operations
+// ============================================
+
+let items = ["A", "B", "C"];
+
+// Add elements
+items.push("D");      // End me add ["A","B","C","D"]
+items.unshift("Z");   // Start me add ["Z","A","B","C","D"]
+
+// Remove elements
+items.pop();          // End se remove ["Z","A","B","C"]
+items.shift();        // Start se remove ["A","B","C"]
+
+// Find element
+let index = items.indexOf("B");  // 1
+let exists = items.includes("B"); // true
+
+// Remove from middle
+items.splice(1, 1);  // Index 1 se 1 element remove
+
+// Get part of array
+let sliced = items.slice(0, 2);  // Pehle 2 elements
+
+// Join array to string
+let str = items.join(", ");  // "A, B, C"
+
+// Reverse array
+items.reverse();  // ["C", "B", "A"]
+
+// Sort array
+let nums = [3, 1, 4, 1, 5, 9];
+nums.sort();  // [1, 1, 3, 4, 5, 9]
+
+// ============================================
+// MODERN ARRAY METHODS
+// ============================================
+
+let numbers = [1, 2, 3, 4, 5];
+
+// map - Transform each element
+let doubled = numbers.map(num => num * 2);
+// [2, 4, 6, 8, 10]
+
+// filter - Keep only matching elements
+let evens = numbers.filter(num => num % 2 === 0);
+// [2, 4]
+
+// reduce - Combine into single value
+let sum = numbers.reduce((total, num) => total + num, 0);
+// 15
+
+// find - Find first match
+let found = numbers.find(num => num > 3);
+// 4
+
+// some - Check if any match
+let hasEven = numbers.some(num => num % 2 === 0);
+// true
+
+// every - Check if all match
+let allPositive = numbers.every(num => num > 0);
+// true
+            </div>
+            
+            <button onclick="demonstrateArrays()">Run Array Demo</button>
+            <div class="output-box" id="arrayOutput"></div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 8. OBJECTS -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>📦 Objects</h2>
+            
+            <div class="code-block">
+// ============================================
+// OBJECT BASICS - Key-value pairs
+// ============================================
+
+// Create object
+let person = {
+    name: "Sai",
+    age: 25,
+    city: "Mumbai",
+    isStudent: false,
+    hobbies: ["coding", "music", "sports"]
+};
+
+// Access properties
+console.log(person.name);       // Dot notation
+console.log(person["age"]);     // Bracket notation
+
+// Add new property
+person.phone = "9876543210";
+
+// Modify property
+person.age = 26;
+
+// Delete property
+delete person.isStudent;
+
+// ============================================
+// OBJECT METHODS - Functions inside object
+// ============================================
+
+let user = {
+    name: "Sai",
+    age: 25,
+    
+    // Method (function inside object)
+    greet: function() {
+        console.log("Hello, " + this.name);
+    },
+    
+    // Modern shorthand
+    sayAge() {
+        console.log("I am " + this.age);
+    }
+};
+
+user.greet();   // "Hello, Sai"
+user.sayAge();  // "I am 25"
+
+// ============================================
+// OBJECT OPERATIONS
+// ============================================
+
+// Get all keys
+let keys = Object.keys(person);
+// ["name", "age", "city", "hobbies"]
+
+// Get all values
+let values = Object.values(person);
+// ["Sai", 25, "Mumbai", [...]]
+
+// Get key-value pairs
+let entries = Object.entries(person);
+// [["name", "Sai"], ["age", 25], ...]
+
+// Check if property exists
+console.log("name" in person);  // true
+
+// Clone object (shallow copy)
+let personCopy = {...person};  // Spread operator
+
+// Merge objects
+let details = {salary: 50000, dept: "IT"};
+let combined = {...person, ...details};
+
+// ============================================
+// NESTED OBJECTS - Objects ke andar objects
+// ============================================
+
+let student = {
+    name: "Rahul",
+    address: {
+        city: "Mumbai",
+        pincode: 400001
+    },
+    marks: {
+        math: 90,
+        english: 85
+    }
+};
+
+console.log(student.address.city);     // "Mumbai"
+console.log(student.marks.math);       // 90
+            </div>
+            
+            <button onclick="demonstrateObjects()">Run Object Demo</button>
+            <div class="output-box" id="objectOutput"></div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 9. DOM MANIPULATION -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>🖱️ DOM Manipulation</h2>
+            
+            <p><strong>DOM = Document Object Model</strong> (HTML ko JavaScript se control karna)</p>
+            
+            <div class="code-block">
+// ============================================
+// SELECTING ELEMENTS - HTML elements ko select
+// ============================================
+
+// By ID
+let element = document.getElementById("myId");
+
+// By Class (returns HTMLCollection)
+let elements = document.getElementsByClassName("myClass");
+
+// By Tag name
+let paragraphs = document.getElementsByTagName("p");
+
+// Query Selector (CSS selector like)
+let first = document.querySelector(".myClass");     // First match
+let all = document.querySelectorAll(".myClass");   // All matches
+
+// ============================================
+// MODIFYING CONTENT - Content change karna
+// ============================================
+
+// Change text
+element.textContent = "New text";
+element.innerText = "New text";
+
+// Change HTML
+element.innerHTML = "<strong>Bold text</strong>";
+
+// Get/Set value (for inputs)
+let input = document.getElementById("myInput");
+input.value = "New value";
+
+// ============================================
+// MODIFYING STYLES - CSS change karna
+// ============================================
+
+element.style.color = "red";
+element.style.backgroundColor = "yellow";
+element.style.fontSize = "20px";
+element.style.display = "none";  // Hide
+
+// Add/remove class
+element.classList.add("active");
+element.classList.remove("hidden");
+element.classList.toggle("highlight");  // Toggle on/off
+
+// ============================================
+// MODIFYING ATTRIBUTES - Attributes change
+// ============================================
+
+// Get attribute
+let src = element.getAttribute("src");
+
+// Set attribute
+element.setAttribute("src", "newimage.jpg");
+
+// Remove attribute
+element.removeAttribute("disabled");
+
+// ============================================
+// CREATING ELEMENTS - Naye elements banana
+// ============================================
+
+// Create element
+let newDiv = document.createElement("div");
+newDiv.textContent = "I'm new!";
+newDiv.classList.add("new-item");
+
+// Add to page
+document.body.appendChild(newDiv);  // End me
+element.prepend(newDiv);            // Start me
+element.before(newDiv);             // Pehle
+element.after(newDiv);              // Baad me
+
+// Remove element
+element.remove();
+            </div>
+            
+            <div class="example-box">
+                <h3>DOM Demo</h3>
+                <p id="demoText">Original Text</p>
+                <button onclick="changeText()">Change Text</button>
+                <button onclick="changeColor()">Change Color</button>
+                <button onclick="toggleVisibility()">Toggle Visibility</button>
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 10. EVENT LISTENERS - THE MOST IMPORTANT! -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>⚡ Event Listeners (Most Important!)</h2>
+            
+            <p><strong>Events = User actions (click, hover, type, etc.)</strong></p>
+            
+            <div class="code-block">
+// ============================================
+// ADDEVENTLISTENER - Modern way to handle events
+// ============================================
+
+// Syntax:
+// element.addEventListener('eventType', function)
+
+// ============================================
+// CLICK EVENT - Click karne pe
+// ============================================
+
+let button = document.getElementById("myButton");
+
+button.addEventListener("click", function() {
+    console.log("Button clicked!");
+    alert("You clicked me!");
+});
+
+// Arrow function se bhi
+button.addEventListener("click", () => {
+    console.log("Clicked!");
+});
+
+// ============================================
+// COMMON EVENT TYPES
+// ============================================
+
+// Mouse Events
+element.addEventListener("click", () => {});      // Click
+element.addEventListener("dblclick", () => {});   // Double click
+element.addEventListener("mouseenter", () => {}); // Mouse enter
+element.addEventListener("mouseleave", () => {}); // Mouse leave
+element.addEventListener("mousemove", () => {});  // Mouse move
+
+// Keyboard Events
+element.addEventListener("keydown", () => {});    // Key press
+element.addEventListener("keyup", () => {});      // Key release
+element.addEventListener("keypress", () => {});   // Key pressed
+
+// Form Events
+element.addEventListener("submit", () => {});     // Form submit
+element.addEventListener("change", () => {});     // Value change
+element.addEventListener("input", () => {});      // Input type
+element.addEventListener("focus", () => {});      // Focus
+element.addEventListener("blur", () => {});       // Lose focus
+
+// Window Events
+window.addEventListener("load", () => {});        // Page load
+window.addEventListener("resize", () => {});      // Window resize
+window.addEventListener("scroll", () => {});      // Scroll
+
+// ============================================
+// EVENT OBJECT - Event ki details
+// ============================================
+
+button.addEventListener("click", function(event) {
+    console.log(event.type);         // "click"
+    console.log(event.target);       // Clicked element
+    console.log(event.clientX);      // Mouse X position
+    console.log(event.clientY);      // Mouse Y position
+});
+
+// ============================================
+// INPUT EVENTS - Real-time input tracking
+// ============================================
+
+let input = document.getElementById("myInput");
+
+input.addEventListener("input", function(e) {
+    console.log("User typed: " + e.target.value);
+});
+
+// ============================================
+// PREVENTING DEFAULT BEHAVIOR
+// ============================================
+
+let form = document.getElementById("myForm");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();  // Form submit na ho
+    console.log("Form submitted!");
+    // Apna custom code
+});
+
+// ============================================
+// REMOVE EVENT LISTENER
+// ============================================
+
+function handleClick() {
+    console.log("Clicked!");
+}
+
+// Add
+button.addEventListener("click", handleClick);
+
+// Remove (same function reference chahiye)
+button.removeEventListener("click", handleClick);
+
+// ============================================
+// EVENT DELEGATION - Parent pe listener
+// ============================================
+
+// Parent pe listener lagao, children pe kaam kare
+let list = document.getElementById("myList");
+
+list.addEventListener("click", function(e) {
+    if (e.target.tagName === "LI") {
+        console.log("List item clicked!");
+    }
+});
+            </div>
+            
+            <!-- Interactive Examples -->
+            <div class="example-box">
+                <h3>🖱️ Click Event</h3>
+                <button id="clickBtn">Click Me!</button>
+                <p id="clickCount">Clicks: 0</p>
+            </div>
+            
+            <div class="example-box">
+                <h3>⌨️ Keyboard Event</h3>
+                <input type="text" id="keyInput" placeholder="Type something...">
+                <p id="keyOutput"></p>
+            </div>
+            
+            <div class="example-box">
+                <h3>🎨 Mouse Events</h3>
+                <div id="colorBox">Hover Me!</div>
+                <p id="mouseOutput"></p>
+            </div>
+            
+            <div class="example-box">
+                <h3>📝 Input Event</h3>
+                <input type="text" id="liveInput" placeholder="Type to see live...">
+                <p id="liveOutput"></p>
+            </div>
+            
+            <div class="example-box">
+                <h3>🔘 Change Event (Dropdown)</h3>
+                <select id="colorSelect">
+                    <option value="">Select color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="purple">Purple</option>
+                </select>
+                <p id="selectOutput"></p>
+            </div>
+            
+            <div class="example-box">
+                <h3>🎯 Multiple Events on Same Element</h3>
+                <div id="multiEventBox" class="demo-item" style="padding: 30px; text-align: center; cursor: pointer;">
+                    Interact with me!
+                </div>
+                <p id="multiOutput"></p>
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 11. PRACTICAL PROJECTS -->
+        <!-- ============================================ -->
+        <div class="section">
+            <h2>🎯 Mini Projects</h2>
+            
+            <!-- Counter App -->
+            <div class="example-box">
+                <h3>1️⃣ Counter App</h3>
+                <div class="counter-display" id="counterValue">0</div>
+                <button onclick="incrementCounter()">➕ Increment</button>
+                <button onclick="decrementCounter()">➖ Decrement</button>
+                <button onclick="resetCounter()">🔄 Reset</button>
+            </div>
+            
+            <!-- Background Color Changer -->
+            <div class="example-box">
+                <h3>2️⃣ Background Color Changer</h3>
+                <button onclick="changeRandomColor()">🎨 Random Color</button>
+                <button onclick="resetBackground()">⬜ Reset</button>
+            </div>
+            
+            <!-- Todo List -->
+            <div class="example-box">
+                <h3>3️⃣ Simple Todo List</h3>
+                <input type="text" id="todoInput" placeholder="Enter task...">
+                <button onclick="addTodo()">➕ Add Task</button>
+                <div id="todoList" style="margin-top: 15px;"></div>
+            </div>
+            
+            <!-- Show/Hide Text -->
+            <div class="example-box">
+                <h3>4️⃣ Show/Hide Content</h3>
+                <button onclick="toggleContent()">Toggle Content</button>
+                <div id="hiddenContent" style="margin-top: 10px; display: none; padding: 15px; background: #e7f3ff; border-radius: 5px;">
+                    🎉 This is hidden content! Click toggle to show/hide.
+                </div>
+            </div>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- SUMMARY -->
+        <!-- ============================================ -->
+        <div class="summary-box">
+            <h2>✅ JavaScript Summary</h2>
+            
+            <h3>📌 Must Know Concepts:</h3>
+            <ul>
+                <li><strong>Variables:</strong> let, const (data store karne ke liye)</li>
+                <li><strong>Data Types:</strong> String, Number, Boolean, Array, Object</li>
+                <li><strong>Operators:</strong> +, -, *, /, ==, ===, &&, ||</li>
+                <li><strong>Conditionals:</strong> if, else, else if, switch</li>
+                <li><strong>Loops:</strong> for, while, forEach</li>
+                <li><strong>Functions:</strong> function keyword, arrow functions</li>
+                <li><strong>Arrays:</strong> map, filter, reduce, forEach</li>
+                <li><strong>Objects:</strong> Key-value pairs, methods</li>
+                <li><strong>DOM:</strong> getElementById, querySelector, innerHTML</li>
+                <li><strong>Events:</strong> addEventListener (MOST IMPORTANT!)</li>
+            </ul>
+            
+            <h3>⚡ addEventListener Syntax:</h3>
+            <div class="code-block">
+element.addEventListener('click', function() {
+    // Code yaha likho
+});
+
+// Arrow function se
+element.addEventListener('click', () => {
+    // Code yaha
+});
+            </div>
+            
+            <h3>🎯 Practice Tips:</h3>
+            <ul>
+                <li>Console.log() use karo testing ke liye</li>
+                <li>Browser DevTools (F12) se debug karo</li>
+                <li>Choti projects bana kar practice karo</li>
+                <li>addEventListener master karo (sabse important!)</li>
+                <li>Har din thoda code likho</li>
+            </ul>
+            
+            <h3>🚀 Next Steps:</h3>
+            <ul>
+                <li>Calculator banao</li>
+                <li>Todo app banao</li>
+                <li>Form validation sikho</li>
+                <li>API calls sikho (fetch)</li>
+                <li>Local Storage sikho</li>
+                <li>Async/Await sikho</li>
+            </ul>
+        </div>
+        
+        <!-- Footer -->
+        <div style="text-align: center; padding: 30px; color: #666; border-top: 2px solid #ddd; margin-top: 30px;">
+            <h2>🎉 JavaScript Basics Complete!</h2>
+            <p>Ab tum interactive websites bana sakte ho! 🚀</p>
+            <p><small>Practice is the key to mastery! Keep coding! 💪</small></p>
+        </div>
+        
+    </div>
+
+    <!-- =========================================== -->
+    <!-- External JavaScript - All ko alag file me move kiya! -->
+    <!-- js/03-javascript.js me dekho sab functions -->
+    <!-- =========================================== -->
+    <script src="js/03-javascript.js"></script>
+</body>
+</html>
+            let output = document.getElementById('dataTypeOutput');
+            let result = '';
+            
+            // Different data types
+            let name = "Sai";
+            let age = 25;
+            let isStudent = true;
+            let hobbies = ["coding", "music"];
+            let person = {name: "Rahul", age: 30};
+            
+            result += `String: "${name}" (${typeof name})\n`;
+            result += `Number: ${age} (${typeof age})\n`;
+            result += `Boolean: ${isStudent} (${typeof isStudent})\n`;
+            result += `Array: [${hobbies}] (${typeof hobbies})\n`;
+            result += `Object: {name: "${person.name}", age: ${person.age}} (${typeof person})`;
+            
+            output.textContent = result;
+            console.log("Data Types Demo:", result);
+        }
+        
+        // ============================================
+        // 2. Operators Demo
+        // ============================================
+        function demonstrateOperators() {
+            let output = document.getElementById('operatorOutput');
+            let result = '';
+            
+            // Arithmetic
+            result += `10 + 3 = ${10 + 3}\n`;
+            result += `10 - 3 = ${10 - 3}\n`;
+            result += `10 * 3 = ${10 * 3}\n`;
+            result += `10 / 3 = ${(10 / 3).toFixed(2)}\n`;
+            result += `10 % 3 = ${10 % 3}\n\n`;
+            
+            // Comparison
+            result += `10 == "10" is ${10 == "10"}\n`;
+            result += `10 === "10" is ${10 === "10"}\n`;
+            result += `10 > 5 is ${10 > 5}\n\n`;
+            
+            // Logical
+            result += `true && true = ${true && true}\n`;
+            result += `true || false = ${true || false}\n`;
+            result += `!true = ${!true}`;
+            
+            output.textContent = result;
+        }
+        
+        // ============================================
+        // 3. Age Check
+        // ============================================
+        function checkAge() {
+            let age = document.getElementById('ageInput').value;
+            let output = document.getElementById('ageOutput');
+            age = parseInt(age);
+            
+            let result = '';
+            
+            if (age >= 18) {
+                result = `Age ${age}: ✅ Adult - Vote kar sakte ho!`;
+            } else {
+                result = `Age ${age}: ❌ Minor - Abhi ${18 - age} saal aur wait karo`;
+            }
+            
+            output.textContent = result;
+        }
+        
+        // ============================================
+        // 4. Loops Demo
+        // ============================================
+        function demonstrateLoops() {
+            let output = document.getElementById('loopOutput');
+            let result = '';
+            
+            // For loop
+            result += 'For Loop:\n';
+            for (let i = 1; i <= 5; i++) {
+                result += `  ${i}. Number ${i}\n`;
+            }
+            
+            result += '\nArray Loop:\n';
+            let fruits = ['Apple', 'Banana', 'Mango'];
+            fruits.forEach((fruit, index) => {
+                result += `  ${index + 1}. ${fruit}\n`;
+            });
+            
+            output.textContent = result;
+        }
+        
+        // ============================================
+        // 5. Function Examples
+        // ============================================
+        function calculateSum() {
+            let num1 = parseInt(document.getElementById('num1').value);
+            let num2 = parseInt(document.getElementById('num2').value);
+            let output = document.getElementById('functionOutput');
+            
+            let sum = num1 + num2;
+            output.textContent = `${num1} + ${num2} = ${sum}`;
+        }
+        
+        function calculateProduct() {
+            let num1 = parseInt(document.getElementById('num1').value);
+            let num2 = parseInt(document.getElementById('num2').value);
+            let output = document.getElementById('functionOutput');
+            
+            let product = num1 * num2;
+            output.textContent = `${num1} × ${num2} = ${product}`;
+        }
+        
+        // ============================================
+        // 6. Array Demo
+        // ============================================
+        function demonstrateArrays() {
+            let output = document.getElementById('arrayOutput');
+            let result = '';
+            
+            let numbers = [1, 2, 3, 4, 5];
+            
+            result += `Original: [${numbers}]\n\n`;
+            
+            // Map
+            let doubled = numbers.map(n => n * 2);
+            result += `Doubled: [${doubled}]\n`;
+            
+            // Filter
+            let evens = numbers.filter(n => n % 2 === 0);
+            result += `Evens: [${evens}]\n`;
+            
+            // Reduce
+            let sum = numbers.reduce((total, n) => total + n, 0);
+            result += `Sum: ${sum}\n`;
+            
+            output.textContent = result;
+        }
+        
+        // ============================================
+        // 7. Object Demo
+        // ============================================
+        function demonstrateObjects() {
+            let output = document.getElementById('objectOutput');
+            
+            let person = {
+                name: "Sai",
+                age: 25,
+                city: "Mumbai",
+                greet: function() {
+                    return `Hello, I'm ${this.name}`;
+                }
+            };
+            
+            let result = '';
+            result += `Name: ${person.name}\n`;
+            result += `Age: ${person.age}\n`;
+            result += `City: ${person.city}\n`;
+            result += `Greeting: ${person.greet()}\n\n`;
+            result += `Keys: [${Object.keys(person).filter(k => typeof person[k] !== 'function')}]\n`;
+            result += `Values: [${Object.values(person).filter(v => typeof v !== 'function')}]`;
+            
+            output.textContent = result;
+        }
+        
+        // ============================================
+        // 8. DOM Manipulation Examples
+        // ============================================
+        function changeText() {
+            document.getElementById('demoText').textContent = 'Text Changed! ✅';
+        }
+        
+        function changeColor() {
+            let element = document.getElementById('demoText');
+            let colors = ['red', 'blue', 'green', 'purple', 'orange'];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            element.style.color = randomColor;
+        }
+        
+        function toggleVisibility() {
+            let element = document.getElementById('demoText');
+            if (element.style.display === 'none') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+        
+        // ============================================
+        // 9. EVENT LISTENERS - AUTO-ATTACHED
+        // ============================================
+        
+        // Wait for DOM to load
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Click Counter
+            let clickCount = 0;
+            document.getElementById('clickBtn').addEventListener('click', function() {
+                clickCount++;
+                document.getElementById('clickCount').textContent = `Clicks: ${clickCount}`;
+            });
+            
+            // Keyboard Event
+            document.getElementById('keyInput').addEventListener('input', function(e) {
+                document.getElementById('keyOutput').textContent = `You typed: ${e.target.value}`;
+            });
+            
+            // Mouse Events on Color Box
+            let colorBox = document.getElementById('colorBox');
+            let mouseOutput = document.getElementById('mouseOutput');
+            
+            colorBox.addEventListener('mouseenter', function() {
+                this.style.background = '#e74c3c';
+                this.textContent = 'Mouse Enter! 🎯';
+                mouseOutput.textContent = 'Event: mouseenter';
+            });
+            
+            colorBox.addEventListener('mouseleave', function() {
+                this.style.background = '#3498db';
+                this.textContent = 'Hover Me!';
+                mouseOutput.textContent = 'Event: mouseleave';
+            });
+            
+            colorBox.addEventListener('click', function() {
+                this.style.background = '#2ecc71';
+                this.textContent = 'Clicked! 👆';
+                mouseOutput.textContent = 'Event: click';
+            });
+            
+            // Live Input
+            document.getElementById('liveInput').addEventListener('input', function(e) {
+                document.getElementById('liveOutput').textContent = `Live: ${e.target.value}`;
+            });
+            
+            // Change Event (Dropdown)
+            document.getElementById('colorSelect').addEventListener('change', function(e) {
+                let output = document.getElementById('selectOutput');
+                output.textContent = `You selected: ${e.target.value}`;
+                output.style.color = e.target.value;
+            });
+            
+            // Multiple Events on Same Element
+            let multiBox = document.getElementById('multiEventBox');
+            let multiOutput = document.getElementById('multiOutput');
+            
+            multiBox.addEventListener('click', function() {
+                multiOutput.textContent = '✅ Click event fired!';
+            });
+            
+            multiBox.addEventListener('mouseenter', function() {
+                this.style.background = '#e7f3ff';
+                multiOutput.textContent = '🖱️ Mouse entered!';
+            });
+            
+            multiBox.addEventListener('mouseleave', function() {
+                this.style.background = 'white';
+                multiOutput.textContent = '👋 Mouse left!';
+            });
+            
+            multiBox.addEventListener('dblclick', function() {
+                multiOutput.textContent = '🎯 Double clicked!';
+                this.style.background = '#fff3e0';
+            });
+            
+        });
+        
+        // ============================================
+        // 10. MINI PROJECTS
+        // ============================================
+        
+        // Counter App
+        let counter = 0;
+        
+        function incrementCounter() {
+            counter++;
+            document.getElementById('counterValue').textContent = counter;
+        }
+        
+        function decrementCounter() {
+            counter--;
+            document.getElementById('counterValue').textContent = counter;
+        }
+        
+        function resetCounter() {
+            counter = 0;
+            document.getElementById('counterValue').textContent = counter;
+        }
+        
+        // Color Changer
+        function changeRandomColor() {
+            let container = document.querySelector('.container');
+            let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            container.style.background = randomColor;
+        }
+        
+        function resetBackground() {
+            document.querySelector('.container').style.background = 'white';
+        }
+        
+        // Todo List
+        let todos = [];
+        
+        function addTodo() {
+            let input = document.getElementById('todoInput');
+            let todoText = input.value.trim();
+            
+            if (todoText === '') {
+                alert('Please enter a task!');
+                return;
+            }
+            
+            // Add to array
+            todos.push(todoText);
+            
+            // Clear input
+            input.value = '';
+            
+            // Render todos
+            renderTodos();
+        }
+        
+        function deleteTodo(index) {
+            todos.splice(index, 1);
+            renderTodos();
+        }
+        
+        function renderTodos() {
+            let todoList = document.getElementById('todoList');
+            
+            if (todos.length === 0) {
+                todoList.innerHTML = '<p style="color: #999;">No tasks yet. Add one!</p>';
+                return;
+            }
+            
+            let html = '';
+            todos.forEach((todo, index) => {
+                html += `
+                    <div class="todo-item">
+                        <span>${index + 1}. ${todo}</span>
+                        <button onclick="deleteTodo(${index})">Delete</button>
+                    </div>
+                `;
+            });
+            
+            todoList.innerHTML = html;
+        }
+        
+        // Show/Hide Content
+        function toggleContent() {
+            let content = document.getElementById('hiddenContent');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        }
+        
+    </script>
+
+</body>
+</html>
+
+<!--
+============================================
+JAVASCRIPT KAISE CHALATE HAI:
+============================================
+
+1. HTML file me <script> tag me likho:
+   <script>
+       console.log("Hello!");
+   </script>
+
+2. External JS file:
+   <script src="script.js"></script>
+
+3. Browser Console me (F12):
+   Direct JavaScript run kar sakte
+
+============================================
+KEY CONCEPTS SUMMARY:
+============================================
+
+✅ Variables (let, const)
+✅ Data Types (String, Number, Boolean, Array, Object)
+✅ Operators (+, -, *, /, ==, ===)
+✅ Conditionals (if/else)
+✅ Loops (for, while, forEach)
+✅ Functions (regular, arrow)
+✅ Arrays (map, filter, reduce)
+✅ Objects (key-value pairs)
+✅ DOM (getElementById, querySelector)
+✅ Events (addEventListener) ← MOST IMPORTANT!
+
+============================================
+addEventListener IS THE KEY!
+============================================
+
+// Syntax:
+element.addEventListener('eventType', function)
+
+// Common events:
+- click (mouse click)
+- input (typing)
+- change (value change)
+- mouseenter (hover start)
+- mouseleave (hover end)
+- keydown (key press)
+- submit (form submit)
+
+============================================
+PRACTICE PROJECTS:
+============================================
+
+1. Calculator
+2. Todo List
+3. Quiz App
+4. Timer/Stopwatch
+5. Image Gallery
+6. Form Validation
+7. Weather App (with API)
+8. Shopping Cart
+
+============================================
+DEBUGGING TIPS:
+============================================
+
+💡 console.log() har jagah use karo
+💡 Browser DevTools (F12) kholo
+💡 Errors red color me console me dikhte
+💡 Ek ek line test karo
+💡 Variables ka value check karo
+💡 Event listeners check karo (attached hai ya nahi)
+
+============================================
+NEXT STEPS:
+============================================
+
+1. ES6 features (arrow functions, spread, destructuring)
+2. Async/Await aur Promises
+3. Fetch API (server se data fetch)
+4. Local Storage (data browser me save)
+5. JSON (data format)
+6. Error handling (try/catch)
+7. Modern frameworks (React, Vue)
+
+============================================
+BEST PRACTICES:
+============================================
+
+✅ let/const use karo (var nahi)
+✅ Meaningful variable names
+✅ Comments likho (samjhane ke liye)
+✅ Functions chote aur focused
+✅ Arrow functions use karo
+✅ === use karo (== nahi)
+✅ addEventListener use karo (onclick nahi)
+✅ Code organized rakho
+
+============================================
+-->

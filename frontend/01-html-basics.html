@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!-- DOCTYPE = Document type declaration, browser ko batata hai ye HTML5 hai -->
+
+<html lang="en">
+<!-- html = Root element, saari cheezo ka parent -->
+<!-- lang="en" = Language English hai (accessibility ke liye important) -->
+
+<head>
+    <!-- HEAD = Metadata, title, styles, scripts (user ko nahi dikhta) -->
+    
+    <meta charset="UTF-8">
+    <!-- Character encoding = Special characters properly display ho -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport = Mobile devices pe properly display ho (responsive) -->
+    
+    <title>HTML Basics - Shuru se Seekho</title>
+    <!-- Title = Browser tab me jo naam dikhta hai -->
+    
+    <!-- External CSS file link kiya (organized aur maintainable) -->
+    <link rel="stylesheet" href="css/01-html.css">
+</head>
+
+<body>
+    <!-- BODY = Jo user ko dikhta hai, saara content yaha -->
+    
+    <!-- ============================================ -->
+    <!-- 1. HEADINGS - Titles aur subtitles -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h1>🎯 HTML Basics - Shuru Se Seekho</h1>
+        <!-- h1 = Main heading, page ka sabse bada title -->
+        <!-- h1 se h6 tak hote hai, h1 sabse bada, h6 sabse chota -->
+        
+        <h2>Headings Example</h2>
+        <h1>Heading 1 - Sabse Bada (Main Title)</h1>
+        <h2>Heading 2 - Sub Title</h2>
+        <h3>Heading 3 - Section Heading</h3>
+        <h4>Heading 4 - Sub Section</h4>
+        <h5>Heading 5 - Chota Heading</h5>
+        <h6>Heading 6 - Sabse Chota</h6>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 2. PARAGRAPHS - Text content -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>📝 Paragraphs (Text)</h2>
+        
+        <p>
+            Ye ek paragraph hai. <code>&lt;p&gt;</code> tag se text likhte hai.
+            Paragraph automatically line break le leta hai upar neeche.
+        </p>
+        
+        <p>
+            Dusra paragraph. Har paragraph ke beech me space automatically aa jaata hai.
+            HTML me kitne bhi space do, wo ek hi space ban jaate hai.
+        </p>
+        
+        <!-- Line break - ek line ka gap -->
+        <p>Line 1<br>Line 2 (br tag se line break)</p>
+        
+        <!-- Horizontal rule - line draw karta hai -->
+        <hr>
+        <p>Upar wali line <code>&lt;hr&gt;</code> tag se bani hai (horizontal rule)</p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 3. TEXT FORMATTING - Text ko style karna -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>✨ Text Formatting</h2>
+        
+        <p><strong>Bold text</strong> - Important text (strong tag)</p>
+        <p><b>Bold text</b> - Simple bold (b tag)</p>
+        
+        <p><em>Italic text</em> - Emphasized text (em tag)</p>
+        <p><i>Italic text</i> - Simple italic (i tag)</p>
+        
+        <p><u>Underlined text</u> - Underline (u tag)</p>
+        
+        <p><mark>Highlighted text</mark> - Yellow highlight (mark tag)</p>
+        
+        <p><small>Small text</small> - Chota text (small tag)</p>
+        
+        <p><del>Deleted text</del> - Cut hua text (del tag)</p>
+        
+        <p><ins>Inserted text</ins> - Naya add kiya text (ins tag)</p>
+        
+        <p>Normal text <sub>subscript</sub> - Neeche (sub tag)</p>
+        <p>Normal text <sup>superscript</sup> - Upar (sup tag)</p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 4. LINKS - Hyperlinks (dusre pages pe jaana) -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>🔗 Links (Hyperlinks)</h2>
+        
+        <!-- a = anchor tag, href = hyperlink reference (URL) -->
+        <p><a href="https://google.com">Google pe jao</a> (External link)</p>
+        
+        <p><a href="https://google.com" target="_blank">Google (New tab me)</a> (target="_blank")</p>
+        
+        <p><a href="02-css-basics.html">CSS Basics (Next page)</a> (Same folder ki file)</p>
+        
+        <p><a href="#headings-section">Page ke andar kisi section pe jao</a> (Internal link)</p>
+        
+        <p><a href="mailto:someone@example.com">Email bhejo</a> (Email link)</p>
+        
+        <p><a href="tel:+919876543210">Phone karo</a> (Phone link, mobile pe kaam karta hai)</p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 5. LISTS - Items ki list -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>📋 Lists</h2>
+        
+        <h3>Unordered List (Bullets)</h3>
+        <!-- ul = unordered list, li = list item -->
+        <ul>
+            <li>Pehla item</li>
+            <li>Dusra item</li>
+            <li>Teesra item</li>
+        </ul>
+        
+        <h3>Ordered List (Numbers)</h3>
+        <!-- ol = ordered list -->
+        <ol>
+            <li>Pehla step</li>
+            <li>Dusra step</li>
+            <li>Teesra step</li>
+        </ol>
+        
+        <h3>Nested List (List ke andar list)</h3>
+        <ul>
+            <li>Frontend
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </li>
+            <li>Backend
+                <ul>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>MongoDB</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 6. IMAGES - Pictures add karna -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>🖼️ Images</h2>
+        
+        <!-- img = image tag, src = source (file ka path/URL) -->
+        <!-- alt = alternative text (agar image load nahi hui to dikhega) -->
+        <!-- width/height = size control -->
+        
+        <p><strong>Online image (URL se):</strong></p>
+        <img 
+            src="https://via.placeholder.com/300x150/667eea/ffffff?text=Sample+Image" 
+            alt="Sample placeholder image"
+            width="300"
+        >
+        
+        <p style="margin-top: 20px;">
+            <code>&lt;img src="url" alt="description" width="300"&gt;</code>
+        </p>
+        
+        <div class="example">
+            <strong>Image attributes:</strong><br>
+            - <code>src</code> = Image ka path/URL (required)<br>
+            - <code>alt</code> = Alternative text (accessibility ke liye important)<br>
+            - <code>width</code> = Chaudi (pixels me)<br>
+            - <code>height</code> = Oonchaayi (pixels me)<br>
+            - <code>title</code> = Hover karne pe jo text dikhta hai
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 7. TABLES - Data ko table me dikhana -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>📊 Tables</h2>
+        
+        <!-- 
+            table = Table container
+            thead = Table header
+            tbody = Table body
+            tr = Table row (line)
+            th = Table header cell (bold)
+            td = Table data cell (normal)
+        -->
+        
+        <table border="1" style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sai</td>
+                    <td>25</td>
+                    <td>Mumbai</td>
+                </tr>
+                <tr>
+                    <td>Rahul</td>
+                    <td>28</td>
+                    <td>Delhi</td>
+                </tr>
+                <tr>
+                    <td>Priya</td>
+                    <td>24</td>
+                    <td>Bangalore</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="example" style="margin-top: 15px;">
+            <strong>Table structure:</strong><br>
+            - <code>&lt;table&gt;</code> = Pura table<br>
+            - <code>&lt;tr&gt;</code> = Row (line)<br>
+            - <code>&lt;th&gt;</code> = Header cell (bold)<br>
+            - <code>&lt;td&gt;</code> = Data cell (normal)
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 8. FORMS - User input lena -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>📝 Forms (User Input)</h2>
+        
+        <form>
+            <!-- Text input -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Apna naam"><br><br>
+            
+            <!-- Email input -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="example@email.com"><br><br>
+            
+            <!-- Password input -->
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            
+            <!-- Number input -->
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="18" max="100"><br><br>
+            
+            <!-- Radio buttons (ek hi select ho sakta) -->
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+            
+            <!-- Checkboxes (multiple select ho sakte) -->
+            <label>Hobbies:</label><br>
+            <input type="checkbox" id="coding" name="hobbies" value="coding">
+            <label for="coding">Coding</label><br>
+            <input type="checkbox" id="music" name="hobbies" value="music">
+            <label for="music">Music</label><br>
+            <input type="checkbox" id="sports" name="hobbies" value="sports">
+            <label for="sports">Sports</label><br><br>
+            
+            <!-- Dropdown/Select -->
+            <label for="city">City:</label><br>
+            <select id="city" name="city">
+                <option value="">-- Select --</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="delhi">Delhi</option>
+                <option value="bangalore">Bangalore</option>
+            </select><br><br>
+            
+            <!-- Textarea (multiple lines) -->
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            
+            <!-- Buttons -->
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+        
+        <div class="example" style="margin-top: 20px;">
+            <strong>Form elements:</strong><br>
+            - <code>&lt;input type="text"&gt;</code> = Text field<br>
+            - <code>&lt;input type="email"&gt;</code> = Email field<br>
+            - <code>&lt;input type="password"&gt;</code> = Password field<br>
+            - <code>&lt;input type="radio"&gt;</code> = Radio button<br>
+            - <code>&lt;input type="checkbox"&gt;</code> = Checkbox<br>
+            - <code>&lt;select&gt;</code> = Dropdown<br>
+            - <code>&lt;textarea&gt;</code> = Multi-line text<br>
+            - <code>&lt;button&gt;</code> = Button
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 9. DIV & SPAN - Containers -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>📦 Div & Span (Containers)</h2>
+        
+        <div class="example">
+            <strong>DIV</strong> = Block level container (puri width leta hai, neeche naya line)<br>
+            Group of elements ko ek saath rakhne ke liye
+        </div>
+        
+        <div style="background: #e7f3ff; padding: 15px; margin: 10px 0;">
+            Ye ek div hai. Div block element hai.
+            <div style="background: #fff3cd; padding: 10px; margin: 10px 0;">
+                Div ke andar div bhi ho sakta hai (nested).
+            </div>
+        </div>
+        
+        <div class="example">
+            <strong>SPAN</strong> = Inline container (sirf apne content ki width leta, same line me rahta)<br>
+            Specific text ko target karne ke liye
+        </div>
+        
+        <p>
+            This is a <span style="color: red; font-weight: bold;">span element</span> inside a paragraph.
+            Span inline hai to same line me rahta hai.
+        </p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 10. SEMANTIC HTML - Meaningful tags -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>🎯 Semantic HTML (Meaningful Tags)</h2>
+        
+        <div class="example">
+            Semantic tags ka matlab hai ki tag ka naam hi batata hai ki uske andar kya hai.<br>
+            SEO (Search Engine Optimization) aur accessibility ke liye important hai.
+        </div>
+        
+        <article style="background: #f8f9fa; padding: 15px; margin: 10px 0;">
+            <header style="border-bottom: 2px solid #dee2e6; padding-bottom: 10px; margin-bottom: 10px;">
+                <h3>Article Title (header tag)</h3>
+                <p><small>By Sai | Date: March 9, 2026</small></p>
+            </header>
+            
+            <section>
+                <h4>Section 1 (section tag)</h4>
+                <p>Article ka pehla section. Content yaha likho.</p>
+            </section>
+            
+            <section>
+                <h4>Section 2</h4>
+                <p>Dusra section. Har section ek topic cover karta hai.</p>
+            </section>
+            
+            <footer style="border-top: 2px solid #dee2e6; padding-top: 10px; margin-top: 10px;">
+                <p><small>Article footer - copyright, links, etc (footer tag)</small></p>
+            </footer>
+        </article>
+        
+        <div class="example">
+            <strong>Common semantic tags:</strong><br>
+            - <code>&lt;header&gt;</code> = Page/section ka header<br>
+            - <code>&lt;nav&gt;</code> = Navigation links<br>
+            - <code>&lt;main&gt;</code> = Main content<br>
+            - <code>&lt;article&gt;</code> = Independent content (blog post, news article)<br>
+            - <code>&lt;section&gt;</code> = Related content ka group<br>
+            - <code>&lt;aside&gt;</code> = Side content (sidebar)<br>
+            - <code>&lt;footer&gt;</code> = Page/section ka footer
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 11. COMMENTS - Notes jo browser ignore kare -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>💬 Comments</h2>
+        
+        <!-- Ye ek comment hai, browser ise ignore karega -->
+        <!-- Comments code explain karne ke liye use hote hai -->
+        
+        <p>Comments HTML me <code>&lt;!-- comment --&gt;</code> se likhte hai.</p>
+        <p>Browser comments ko display nahi karta, sirf source code me dikhte hai.</p>
+        <p>Comments ka use:</p>
+        <ul>
+            <li>Code explain karne ke liye</li>
+            <li>Code temporarily disable karne ke liye</li>
+            <li>TODO notes likhne ke liye</li>
+            <li>Team members ko samjhane ke liye</li>
+        </ul>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 12. SPECIAL CHARACTERS - HTML entities -->
+    <!-- ============================================ -->
+    <div class="section">
+        <h2>🔤 Special Characters</h2>
+        
+        <p>HTML me kuch characters ka special meaning hai, unhe likhne ke liye entities use karte hai:</p>
+        
+        <table border="1" style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <th>Character</th>
+                <th>Entity Code</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>&amp;lt;</td>
+                <td>Less than</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>&amp;gt;</td>
+                <td>Greater than</td>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td>&amp;amp;</td>
+                <td>Ampersand</td>
+            </tr>
+            <tr>
+                <td>&quot;</td>
+                <td>&amp;quot;</td>
+                <td>Quote</td>
+            </tr>
+            <tr>
+                <td>&copy;</td>
+                <td>&amp;copy;</td>
+                <td>Copyright</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&amp;nbsp;</td>
+                <td>Non-breaking space</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SUMMARY - Quick reference -->
+    <!-- ============================================ -->
+    <div class="section" style="background: #d4edda; border-left: 5px solid #28a745;">
+        <h2>✅ Summary - Quick Reference</h2>
+        
+        <h3>Basic Structure:</h3>
+        <code>
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&lt;head&gt; (metadata, title, styles) &lt;/head&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt; (visible content) &lt;/body&gt;<br>
+            &lt;/html&gt;
+        </code>
+        
+        <h3 style="margin-top: 20px;">Must Know Tags:</h3>
+        <ul>
+            <li><code>&lt;h1&gt; to &lt;h6&gt;</code> - Headings</li>
+            <li><code>&lt;p&gt;</code> - Paragraph</li>
+            <li><code>&lt;a href=""&gt;</code> - Link</li>
+            <li><code>&lt;img src=""&gt;</code> - Image</li>
+            <li><code>&lt;div&gt;</code> - Block container</li>
+            <li><code>&lt;span&gt;</code> - Inline container</li>
+            <li><code>&lt;ul&gt;&lt;li&gt;</code> - Unordered list</li>
+            <li><code>&lt;ol&gt;&lt;li&gt;</code> - Ordered list</li>
+            <li><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code> - Table</li>
+            <li><code>&lt;form&gt;&lt;input&gt;</code> - Forms</li>
+        </ul>
+        
+        <h3 style="margin-top: 20px;">Next Steps:</h3>
+        <p>
+            <a href="02-css-basics.html" style="background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+                Next: CSS Basics →
+            </a>
+        </p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer style="text-align: center; padding: 20px; color: #666; border-top: 2px solid #ddd; margin-top: 30px;">
+        <p>HTML Basics Complete! 🎉</p>
+        <p><small>Happy Learning! Practice karte raho 💪</small></p>
+    </footer>
+
+</body>
+</html>
+
+<!-- 
+============================================
+HTML FILE KAISE CHALANA HAI:
+============================================
+
+1. Browser me kholo:
+   - File Explorer me file pe right click
+   - "Open with" → "Chrome/Firefox/Edge"
+   
+2. Direct path:
+   - Browser me ye paste karo:
+   - file:///C:/Users/sai/OneDrive/Desktop/learning-logs/frontend/01-html-basics.html
+
+3. Live Server (VS Code):
+   - VS Code me file kholo
+   - Right click → "Open with Live Server"
+
+============================================
+KEY POINTS YAAD RAKHNA:
+============================================
+
+1. HTML = Structure (layout, content)
+2. Tags always close hote hai: <tag></tag>
+3. Self-closing tags: <img>, <br>, <hr>, <input>
+4. Attributes = Extra info: <tag attribute="value">
+5. Nesting = Tags ke andar tags
+6. Comments = <!-- comment -->
+7. Semantic tags use karo (better SEO)
+8. Forms me name attribute zaroori (backend ke liye)
+
+============================================
+PRACTICE KARNE KE LIYE:
+============================================
+
+1. Apna khud ka webpage banao
+2. Har tag ko try karo
+3. Forms banao aur test karo
+4. Tables me data organize karo
+5. Images add karo (online URL se)
+6. Links add karo (navigation)
+
+============================================
+-->
