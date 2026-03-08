@@ -1,13 +1,13 @@
 <div align="center">
 
-# 🚀 Learning Logs - फुल स्टैक वेब डेवलपमेंट 
+# 🚀 Learning Logs - Full Stack Web Development 
 
-### _Learn Web Development in Hindi/Hinglish - Because कोड भी अपनी भाषा में समझ आता है!_ 💡
+### _Learn Web Development in Hinglish - Because code bhi apni language mein samajh aata hai!_ 💡
 
-[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/yourusername/learning-logs)
-[![Hindi/Hinglish](https://img.shields.io/badge/Language-Hindi%2FHinglish-orange.svg)](https://github.com/yourusername/learning-logs)
-[![Beginner Friendly](https://img.shields.io/badge/Beginner-Friendly-green.svg)](https://github.com/yourusername/learning-logs)
-[![Open Source](https://img.shields.io/badge/Open-Source-blue.svg)](https://github.com/yourusername/learning-logs)
+[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/Pritamx4/learning-logs)
+[![Hinglish](https://img.shields.io/badge/Language-Hinglish-orange.svg)](https://github.com/Pritamx4/learning-logs)
+[![Beginner Friendly](https://img.shields.io/badge/Beginner-Friendly-green.svg)](https://github.com/Pritamx4/learning-logs)
+[![Open Source](https://img.shields.io/badge/Open-Source-blue.svg)](https://github.com/Pritamx4/learning-logs)
 
 **🎯 Zero to Hero in Web Development | 📚 Complete Tutorials | 💻 Production-Ready Code**
 
@@ -19,16 +19,16 @@
 
 ## 🌟 Why This Project is Different?
 
-> **"Programming सीखना मुश्किल नहीं है, बस समझाने का तरीका सही होना चाहिए!"**
+> **"Programming seekhna mushkil nahi hai, bas samjhane ka tarika sahi hona chahiye!"**
 
 ### 💎 Unique Features:
 
-- **🇮🇳 Hindi/Hinglish Comments** - हर line समझाया गया है in your language!
-- **🎨 Professional Code Structure** - Industry standards follow करते हुए
-- **🔥 Interactive Examples** - सिर्फ theory नहीं, live demos भी!
+- **🇮🇳 Hinglish Comments** - Har line samjhaya gaya hai in your language!
+- **🎨 Professional Code Structure** - Industry standards follow karte hue
+- **🔥 Interactive Examples** - Sirf theory nahi, live demos bhi!
 - **⚡ Modern Best Practices** - Separation of concerns, clean architecture
-- **🚀 Production Ready** - Copy-paste करो और deploy करो!
-- **📱 Responsive Design** - Mobile se लेकर desktop तक perfect!
+- **🚀 Production Ready** - Copy-paste karo aur deploy karo!
+- **📱 Responsive Design** - Mobile se lekar desktop tak perfect!
 
 ---
 
@@ -138,7 +138,7 @@ git --version
 
 ```bash
 # 1️⃣ Clone the repository
-git clone https://github.com/yourusername/learning-logs.git
+git clone https://github.com/Pritamx4/learning-logs.git
 cd learning-logs
 
 # 2️⃣ Backend Setup
@@ -256,7 +256,7 @@ CSS file:   .alert { color: red; padding: 10px; }
 JS file:    document.querySelector('.alert').addEventListener('click', ...);
 ```
 
-### 🎯 **Hindi/Hinglish Comments**
+### 🎯 **Hinglish Comments**
 
 ```javascript
 // Counter app banate hai
@@ -341,9 +341,9 @@ This project is **open source** and available under the [MIT License](LICENSE).
 
 ### 📧 Contact
 
-- **GitHub:** [yourusername](https://github.com/yourusername)
-- **Email:** your.email@example.com
-- **Twitter:** [@yourhandle](https://twitter.com/yourhandle)
+- **GitHub:** [Pritamx4](https://github.com/Pritamx4)
+- **Email:** pritamsingh4092005@gmail.com
+- **Twitter:** [@pritamx4](https://twitter.com/pritamx4)
 
 ### ⭐ **Did you find this helpful?**
 
@@ -353,7 +353,7 @@ Give us a ⭐ on GitHub — it motivates us to create more content!
 
 ## 🙏 Acknowledgments
 
-- 💡 Inspired by the need for quality **Hindi/Hinglish** programming content
+- 💡 Inspired by the need for quality **Hinglish** programming content
 - 🎓 Created for **learners** who want clear, simple explanations
 - 🚀 Built with ❤️ for the **Indian developer community**
 
@@ -376,17 +376,17 @@ Stay tuned for video explanations of each concept! 🎥
 
 <div align="center">
 
-### 🌟 **"Code सीखो, Build करो, Share करो!"** 🌟
+### 🌟 **"Code seekho, Build karo, Share karo!"** 🌟
 
 **Made with ❤️ for aspiring developers**
 
-[![Star this repo](https://img.shields.io/github/stars/yourusername/learning-logs?style=social)](https://github.com/yourusername/learning-logs)
-[![Follow](https://img.shields.io/github/followers/yourusername?style=social)](https://github.com/yourusername)
+[![Star this repo](https://img.shields.io/github/stars/Pritamx4/learning-logs?style=social)](https://github.com/Pritamx4/learning-logs)
+[![Follow](https://img.shields.io/github/followers/Pritamx4?style=social)](https://github.com/Pritamx4)
 
 ---
 
 **Happy Coding! 🚀💻✨**
 
-_"The best way to learn programming is by doing. तो चलो, करते हैं!"_
+_"The best way to learn programming is by doing. Toh chalo, karte hain!"_
 
 </div>
